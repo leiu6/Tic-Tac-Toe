@@ -93,6 +93,11 @@ namespace Tic_Tac_Toe
 
             return false;
         }
+
+        public static char[,] BestMove(char[,] board)
+        {
+            return null;
+        }
     }
 
     static class Player
