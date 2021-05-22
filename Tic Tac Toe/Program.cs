@@ -94,6 +94,39 @@ namespace Tic_Tac_Toe
             return false;
         }
 
+        public static bool CheckComputerWin(char[,] board)
+        {
+            //first we will check each row
+            for (int row = 0; row < 3; row++)
+            {
+                if (board[row, 0] == 'O' && board[row, 1] == 'O' && board[row, 2] == 'O')
+                {
+                    return true;
+                }
+            }
+
+            //then each column
+            for (int col = 0; col < 3; col++)
+            {
+                if (board[0, col] == 'O' && board[1, col] == 'O' && board[2, col] == 'O')
+                {
+                    return true;
+                }
+            }
+
+            //check each diagonal
+            if (board[0, 0] == 'O' && board[1, 1] == 'O' && board[2, 2] == 'O')
+            {
+                return true;
+            }
+            else if (board[0, 2] == 'O' && board[1, 1] == 'O' && board[2, 0] == 'O')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public static char[,] BestMove(char[,] board)
         {
             return null;
